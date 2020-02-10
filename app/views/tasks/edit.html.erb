@@ -1,0 +1,15 @@
+<h1>You're in "Edit" view for Tasks!</h1>
+<h3>Current values for task...</h3>
+<ul>
+  <li><strong>Task</strong>: <%= @task.title %></li>
+  <li><strong>--> Status</strong>: <%= @task.completed? ? "Done!" : "Still to do..." %></li>
+  <li><strong>--> Desc:</strong>: <%= @task.details %></li>
+</ul>
+<h3> Use this form to update values..</h3>
+<%= form_with(url: task_path, method: "patch") do %>
+  <%= check_box_tag (:completed)%>
+  <%= label_tag(:completed, "Completed?") %>
+  <%= text_field(:task, :title)%>
+  <%= text_field(:task, :details)%>
+  <%= submit_tag("Update!") %>
+<% end %>
