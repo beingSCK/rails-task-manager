@@ -1,6 +1,7 @@
 <h1>You're in tasks --> index view!</h1>
 <ul>
   <% @tasks.each do |task| %>
-  <li><span><%= task.completed? ? "☑️" : "☐" %></span><%= task.title %></li>
+  <li><span><%= task.completed? ? "☑️" : "☐" %></span>
+    <a href="/task/<%= task.id %>"><%= task.title %></a></li>
   <% end %>
 </ul>

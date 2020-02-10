@@ -4,3 +4,4 @@
   <li><strong>--> Status</strong>: <%= @task.completed? ? "Done!" : "Still to do..." %></li>
   <li><strong>--> Desc:</strong>: <%= @task.details %></li>
 </ul>
+<%= link_to "Back to index?", tasks_path %>
