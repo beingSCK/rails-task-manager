@@ -1,0 +1,7 @@
+<h1>You're in the view for tasks --> new!</h1>
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="task[title]" placeholder="task name?">
+  <input type="text" name="task[details]" placeholder="task description?">
+  <input type="submit" value="Submit!">
+</form>

@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get 'task/:id', to: 'tasks#show'
 
   # routes for adding a new task
-  # get...
-  # post...
+  get 'tasks/new', to: 'tasks#new'
+  post 'tasks', to: 'tasks#create'
 
   # route for showing one task
   # get ...
